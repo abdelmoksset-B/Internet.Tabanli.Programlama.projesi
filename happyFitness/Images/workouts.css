@@ -1,0 +1,22 @@
+.workouts_img2,.shoulder_img{
+  border: solid black 2px;
+  margin: 5px;
+}
+.middle_workouts{
+  margin-left: 5px;
+}
+.welcome_workouts,.welcome_workouts1{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+.welcome_workouts1{
+  font-size: 20px;
+}
+.symbol_workouts_span{
+  font-size: 30px;
+  font-weight: bold;
+}
+.shoulder_img{
+  padding: 50px;
+}

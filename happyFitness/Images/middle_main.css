@@ -1,0 +1,55 @@
+.part1_main_page{
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.motivation_line{
+font-family:Bebas Neue;
+color: rgb(35, 125, 14);
+text-align: center;
+font-size: 40px;
+}
+.motivatin_line_span{
+  font-weight: bolder;
+}
+
+.button_main_page{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sign_in_button{
+  background-color: rgb(16, 132, 16);
+  color:white;
+  border: 0;
+  padding: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin: 10px;
+  border-radius: 60px;
+ 
+}
+.sign_in_button:hover{
+  background-color: rgb(44, 210, 44);
+  
+}
+
+.sign_up_button{
+  background-color: rgb(50, 143, 229);
+  color:white;
+  border: 0;
+  padding: 30px;
+  padding-right: 40px;
+  padding-left: 40px;
+  margin: 10px;
+  border-radius: 60px;
+  
+  transition:0.5s;
+ 
+
+}
+.sign_up_button:hover{
+  background-color: rgb(22, 110, 193);
+  color:rgb(0, 0, 0);
+}

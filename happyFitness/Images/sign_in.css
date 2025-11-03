@@ -1,0 +1,55 @@
+.sign_in_menu{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  background-color: antiquewhite;
+  margin-top: 30px;
+  padding: 0;
+  margin-bottom: 0;
+}
+.sign_in_logo{
+ 
+  
+  max-width: 500px;
+}
+.sign_in_welcome{
+  
+  font-size: 30px;
+ 
+}
+.email_sign_text{
+ 
+  font-size: 20px;
+  
+}
+
+.sign_in_log_button{
+  background-color:rgb(59, 152, 33) ;
+  color: rgb(255, 255, 255);
+ justify-content: center;
+ margin-left: 35px;
+  margin-top: 10px;
+  border: 0cap;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  transition: 0.15s;
+
+}
+
+.sign_in_log_button:hover{
+ background-color: rgb(237, 236, 236);
+ color:rgb(59, 152, 33) ;
+}
+
+.forgot_password{
+  font-size: small;
+  margin-top: 15px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: grey;
+}
+  

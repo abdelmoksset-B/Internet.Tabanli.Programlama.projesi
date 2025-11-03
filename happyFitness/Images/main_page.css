@@ -1,0 +1,62 @@
+.logo{
+   display: flix;
+  
+  background-color:rgb(20, 89, 8);
+  border-radius: 30px;
+  margin: 5px;
+}
+.img_logo{
+  width: 250px;
+  padding: 10px;
+  flex: 1;
+}
+.motivation_line{
+font-family:shrikhand;
+color: rgb(35, 125, 14);
+text-align: center;
+}
+
+.button_main_page{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sign_in_button{
+  background-color: rgb(16, 132, 16);
+  color:white;
+  border: 0;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+ 
+}
+.sign_in_button:hover{
+  background-color: rgb(44, 210, 44);
+  
+}
+
+.sign_up_button{
+  background-color: rgb(50, 143, 229);
+  color:white;
+  border: 0;
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  
+  transition:0.5s;
+ 
+
+}
+.sign_up_button:hover{
+  background-color: rgb(22, 110, 193);
+  color:rgb(0, 0, 0);
+}
+
+
+
