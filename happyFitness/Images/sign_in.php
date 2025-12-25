@@ -1,48 +1,81 @@
+<?php
+session_start();
+
+$errors = [
+    'login' => $_SESSION['login_error'] ?? '',
+    'register' => $_SESSION['register_error'] ?? ''
+];
+
+$activeForm = $_SESSION['active_form'] ?? 'login';
+session_unset();
+
+function showError($error) {
+    return !empty($error) ? "<p class='error-message'>$error</p>" : '';
+}
+
+function isActiveForm($formName, $activeForm) {
+    return $formName === $activeForm ? 'active' : '';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="sign_in.css">
-<link rel="stylesheet" href="bottom_main.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">  
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fugaz+One&family=Shrikhand&display=swap" rel="stylesheet">
-
-  <title>Sign In | HAPPY FITNESS</title>
+  <title>Login & Register</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="sign.css">
 </head>
 <body>
-  <div class="retun"><a href="./index.php"><span class="return_span">&#11176;Return to Main page</span> </a></div>
-  <div class="sign_in_menu">
-    <div class="sign_in_heading">
-      <img class="sign_in_logo" src="images/HP_logo_white.png" alt="logo">
-      <p class="sign_in_welcome">Welcome to Happy Fitness</p>
-    </div>
-    <div class="email_sign">
-      <p class="email_sign_text">Entre you Email, please:</p>
-      <input class="email_sign_input" type="text" placeholder="Email"> 
-      <p class="email_sign_text">Entre you Password, please:</p>
-      <input class="email_sign_input" type="text" placeholder="Password">
-      <div class="sign_in_log">
-        <a href="./workouts.php"><button class="sign_in_log_button">Sign in</button></a>
-     </div>
-      <p class="forgot_password">Forgot Password?</p>
-    </div>
+
+<div class="container">
+
+  <div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
+    <form action="login_register.php" method="post">
+      <h2>Login</h2>
+
+      <?= showError($errors['login']); ?>
+
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+
+      <button type="submit" name="login">Login</button>
+
+      <p>Don't have an account?
+        <a href="#" onclick="showForm('register-form')">Register</a>
+      </p>
+    </form>
+    <p class="return-link">
+      <a href="index.php">Return to main page?</a>
+    </p>
   </div>
-  <div class="bottom_main_page">
-  <p class="contact_us"><u>Contact US</u></p>
-  <p class="bottom_text1">HappyFitness - Your Fitness Companion</p>
- <p class="bottom_text2">Empowering you to achieve your fitness goals with smart tracking and personalized insights.</p>
- <p class="phone"><span class="phone_span"> <i style="font-size:24px" class="fa">&#xf095;</i></span>+90 &#10088;534&#10089; 705 20 83 </p>
- <p class="mail"><span class="mail_span"><i style="font-size:24px" class="fa">&#xf0e0;</i></span>abdelmoksset667&#64;gmail.com</p>
-  
+
+  <div class="form-box <?= isActiveForm('register', $activeForm); ?>" id="register-form">
+    <form action="login_register.php" method="post">
+      <h2>Register</h2>
+
+      <?= showError($errors['register']); ?>
+
+      <input type="text" name="first_name" placeholder="First Name" required>
+      <input type="text" name="last_name" placeholder="Last Name" required>
+      <input type="tel" name="phone_number" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+
+      <button type="submit" name="register">Register</button>
+
+      <p>Already have an account?
+        <a href="#" onclick="showForm('login-form')">Login</a>
+      </p>
+    </form>
+    <p class="return-link">
+      <a href="index.php">Return to main page?</a>
+    </p>
+  </div>
+
 </div>
-    
-  
+
+<script src="script.js"></script>
 </body>
 </html>
