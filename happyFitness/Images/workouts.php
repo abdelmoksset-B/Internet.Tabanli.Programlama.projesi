@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['name'])) {
+    header("Location: sign_in.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +42,10 @@
     </div>
     <div class="middle_workouts">
         <div class="workouts_p">
-          <p class="welcome_workouts">Welcome to Workouts section</p>
+          <h1 style="text-align:center;">
+              Welcome <?php echo htmlspecialchars($_SESSION['name']); ?> to Happy Fitness 
+          </h1>
+                  
           <p class="welcome_workouts1"><span class="symbol_workouts_span">&#11167;</span>Choose the muscle you want to train<span class="symbol_workouts_span">&#11167;</span>  </p>
         </div>
         <div class="workouts_img">
