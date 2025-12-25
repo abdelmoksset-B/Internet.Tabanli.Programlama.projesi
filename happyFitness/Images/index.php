@@ -22,9 +22,7 @@
   <div class="right_heading_main">
     <img class="img_logo" src="images/Hp_logo.png" alt="HAPPY FITNESS'S LOGO">
   </div>
-  <div class="middle_heading_main"> 
-    <a  href="./workouts.php"><button class="Workouts" >Workouts</button></a>
-  </div>
+  
   <div class="left_heading_main">
    <input class="search_main" type="text" placeholder="Search" >
    <img class="profil_icon" src="images/profile_icon.jpg" alt="profil_icon">
@@ -37,8 +35,8 @@
 </div> 
 
 <div class="button_main_page" >
- <a href="./sign_in.php"><button class="sign_in_button" >Sign IN</button></a> 
- <a href="./sign_up.php"> <button class="sign_up_button" >Sign UP</button></a>
+ <a href="./sign_in.php"><button class="sign_in_button"> Register</button></a> 
+ 
 </div>
 
 <div class="bottom_main_page">
